@@ -4,13 +4,13 @@ CFLAGS=-W -pedantic-errors
 all: clean tetris
 
 tetris: gamedata.o tetris.o
-	clang gamedata.o tetris.o `pkg-config --libs raylib` -o tetris
+	$(CC) $(CFLAGS) gamedata.o tetris.o `pkg-config --libs raylib` -o tetris
 
 tetris.o: tetris.h tetris.c
-	clang -c `pkg-config --cflags raylib` tetris.c
+	$(CC) $(CFLAGS) -c `pkg-config --cflags raylib` tetris.c
 
 gamedata.o: gamedata.h gamedata.c
-	clang -c gamedata.c
+	$(CC) $(CFLAGS) -c gamedata.c
 
 clean:
 	rm gamedata.o tetris.o tetris

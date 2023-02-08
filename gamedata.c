@@ -160,16 +160,16 @@ void set_fast_fall_movement_counter(counter_t* self, int val) {
 
 void set_gravity_movement_counter(counter_t* self, int val) {
     self->gravity_movement_counter = val;
-};
+}
 
 void set_lateral_movement_counter(counter_t* self, int val) {
     self->lateral_movement_counter = val;
-};
+}
 
 void set_turn_movement_counter(counter_t* self, int val) {
     self->turn_movement_counter = val;
-};
+}
 
 void set_fade_line_counter(counter_t* self, int val) {
     self->fade_line_counter = val;
-};
+}
